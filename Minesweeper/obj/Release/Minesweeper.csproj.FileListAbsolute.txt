@@ -1,0 +1,12 @@
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Release\assets\hotto dogu.wav
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Release\assets\win.wav
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Release\Minesweeper.exe.config
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Release\Minesweeper.exe
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Release\Minesweeper.pdb
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.Main.resources
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.Properties.Resources.resources
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.csproj.GenerateResource.Cache
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.exe
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.pdb
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Release\Minesweeper.csprojResolveAssemblyReference.cache
