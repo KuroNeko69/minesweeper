@@ -33,6 +33,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicOnoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.previousSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restartGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.endGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,23 +124,50 @@
             // 
             // musicOnoffToolStripMenuItem
             // 
+            this.musicOnoffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nextSongToolStripMenuItem,
+            this.previousSongToolStripMenuItem,
+            this.addSongToolStripMenuItem});
             this.musicOnoffToolStripMenuItem.Name = "musicOnoffToolStripMenuItem";
-            this.musicOnoffToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.musicOnoffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.musicOnoffToolStripMenuItem.Text = "Music on/off";
             this.musicOnoffToolStripMenuItem.Click += new System.EventHandler(this.musicOnoffToolStripMenuItem_Click);
+            // 
+            // nextSongToolStripMenuItem
+            // 
+            this.nextSongToolStripMenuItem.Enabled = false;
+            this.nextSongToolStripMenuItem.Name = "nextSongToolStripMenuItem";
+            this.nextSongToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nextSongToolStripMenuItem.Text = "Next Song";
+            this.nextSongToolStripMenuItem.Click += new System.EventHandler(this.nextSongToolStripMenuItem_Click);
+            // 
+            // previousSongToolStripMenuItem
+            // 
+            this.previousSongToolStripMenuItem.Enabled = false;
+            this.previousSongToolStripMenuItem.Name = "previousSongToolStripMenuItem";
+            this.previousSongToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.previousSongToolStripMenuItem.Text = "Previous Song";
+            this.previousSongToolStripMenuItem.Click += new System.EventHandler(this.previousSongToolStripMenuItem_Click);
+            // 
+            // addSongToolStripMenuItem
+            // 
+            this.addSongToolStripMenuItem.Name = "addSongToolStripMenuItem";
+            this.addSongToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addSongToolStripMenuItem.Text = "Add Song";
+            this.addSongToolStripMenuItem.Click += new System.EventHandler(this.addSongToolStripMenuItem_Click);
             // 
             // restartGameToolStripMenuItem
             // 
             this.restartGameToolStripMenuItem.Enabled = false;
             this.restartGameToolStripMenuItem.Name = "restartGameToolStripMenuItem";
-            this.restartGameToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.restartGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restartGameToolStripMenuItem.Text = "Restart game";
             this.restartGameToolStripMenuItem.Click += new System.EventHandler(this.bPlayAgain_Click);
             // 
             // endGameToolStripMenuItem
             // 
             this.endGameToolStripMenuItem.Name = "endGameToolStripMenuItem";
-            this.endGameToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.endGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.endGameToolStripMenuItem.Text = "End game";
             this.endGameToolStripMenuItem.Click += new System.EventHandler(this.bQuit_Click);
             // 
@@ -748,9 +778,9 @@
             this.Controls.Add(this.pWin);
             this.Controls.Add(this.pGame);
             this.Controls.Add(this.pAuthor);
+            this.Controls.Add(this.pLose);
             this.Controls.Add(this.pRules);
             this.Controls.Add(this.pMainMenu);
-            this.Controls.Add(this.pLose);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -836,6 +866,9 @@
         private System.Windows.Forms.Button bQuitW;
         private System.Windows.Forms.Button bPlayAgainW;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolStripMenuItem nextSongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem previousSongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addSongToolStripMenuItem;
     }
 }
 

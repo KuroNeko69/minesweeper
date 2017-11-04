@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Minesweeper
 {
@@ -18,13 +19,13 @@ namespace Minesweeper
         private int[,] mapState;
         private PictureBox[,] mapDisplay;
 
-        private System.Media.SoundPlayer music = new System.Media.SoundPlayer("assets\\hotto dogu.wav");
+        private WindowsMediaPlayer music = new WindowsMediaPlayer();
 
         public Main()
         {
             InitializeComponent();
             lastPanel = pMainMenu;
-            music.Load();
+            music.currentPlaylist.appendItem(music.newMedia("assets\\hotto dogu.mp3"));
             toggleMusic();
         }
 
@@ -33,11 +34,11 @@ namespace Minesweeper
             if (isMusicOn())
             {
                 musicOnoffToolStripMenuItem.Text = "Music on/off (off)";
-                music.Stop();
+                music.controls.stop();
             } else
             {
                 musicOnoffToolStripMenuItem.Text = "Music on/off (on)";
-                music.PlayLooping();
+                music.controls.play();
             }
         }
 
@@ -58,7 +59,11 @@ namespace Minesweeper
                 panel.Visible = panel == p;
             }
 
-            if (p != pGame)
+            if (p == pGame)
+            {
+                this.Width = mapState.GetLength(0) * 16 + 34;
+                this.Height = mapState.GetLength(1) * 16 + 111;
+            } else
             {
                 this.Size = new Size(550, 500);
             }
@@ -69,6 +74,16 @@ namespace Minesweeper
             foreach (var panel in this.Controls.OfType<Panel>())
             {
                 panel.Visible = panel == lastPanel;
+            }
+
+            if (lastPanel == pGame)
+            {
+                this.Width = mapState.GetLength(0) * 16 + 34;
+                this.Height = mapState.GetLength(1) * 16 + 111;
+            }
+            else
+            {
+                this.Size = new Size(550, 500);
             }
         }
 
@@ -114,8 +129,6 @@ namespace Minesweeper
             mapState = new int[width, height];
             displayMap(width, height);
             map = null;
-            this.Width = width * 16 + 34;
-            this.Height = height * 16 + 111;
             switchToPanel(pGame);
         }
 
@@ -123,10 +136,6 @@ namespace Minesweeper
         {
             restartGameToolStripMenuItem.Enabled = false;
             switchToPanel(pMainMenu);
-            if (isMusicOn() && lastPanel == pWin)
-            {
-                music.Play();
-            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -366,6 +375,28 @@ namespace Minesweeper
                     }
                 }
             }
+        }
+
+        private void addSongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Music Files (*.mp3, *.wav)|*.mp3;*.wav";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                music.currentPlaylist.appendItem(music.newMedia(file.FileName));
+                nextSongToolStripMenuItem.Enabled = true;
+                previousSongToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void nextSongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            music.controls.next();
+        }
+
+        private void previousSongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            music.controls.previous();
         }
     }
 }

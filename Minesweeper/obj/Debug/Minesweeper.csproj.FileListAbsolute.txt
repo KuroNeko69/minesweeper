@@ -9,4 +9,9 @@ C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
 C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Main.resources
 C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Debug\assets\win.wav
-C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Debug\assets\hotto dogu.wav
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Debug\Interop.WMPLib.dll
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\Interop.WMPLib.dll
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.ResolveComReference.cache
+C:\Users\Terax\source\repos\Minesweeper\Minesweeper\bin\Debug\assets\hotto dogu.mp3
